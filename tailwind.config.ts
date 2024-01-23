@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {},
   },
+  base: '/Portfolio/',
   plugins: [],
 };
 export default config;

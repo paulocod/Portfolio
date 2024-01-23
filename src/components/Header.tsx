@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ onButtonClick }) => {
                 <button onClick={handleButtonClick('contact')} className="text-center text-white p-2 rounded-full hover:bg-zinc-700 transition">Contact me</button>
             </nav>
             <div className="text-end">
-                <a href="/software-engineer.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">Resume</a>
+                <a href="/file/software-engineer.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">Resume</a>
             </div>
         </header>
     );
