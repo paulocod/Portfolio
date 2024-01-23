@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio/' : '',
-  };
+  output: 'export',
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio/' : '',
+};
 
-  export default nextConfig;
+export default nextConfig;
