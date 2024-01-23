@@ -50,8 +50,9 @@ export default function Home() {
       <div id="contact" className="my-12 flex items-center justify-between px-4">
         <div>
           <h1 className="text-4xl mb-2">Have idea about <strong className="text-orange-500">project</strong>?</h1>
-          <p className="text-xl mb-4 w-2/3">Write anything here something about yourself to showcase what actually you doing or targeting etc.</p>
-          <button className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">Send a message</button>
+          <p className="text-xl mb-4 w-2/3">
+            Bridging Ideas with Code: Crafting Digital Realities from Concept to Completion. Transforming Vision into Actionable Software Solutions with Precision and Passion.</p>
+          {/* <button className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">Send a message</button> */}
         </div>
         <div className="relative w-96 h-96">
           <Image
@@ -69,19 +70,19 @@ export default function Home() {
             Paulo.<strong className="text-orange-500">dev</strong>
           </a>
         </div>
-        <nav className="flex rounded-full place-content-center space-x-7 border-2 border-orange-500 place-items-center bg-zinc-800">
+        <nav className="flex rounded-full place-content-center space-x-16 border-2 border-orange-500 place-items-center bg-zinc-800">
           <a href="https://www.linkedin.com/in/paulovcampos/" target="_blank" className="flex items-center justify-center bg-zinc-700 hover:bg-zinc-600 text-white rounded-full p-2 transition">
             <LinkedinLogo size={32} weight="light" />
           </a>
           <a href="mailto:paulo.campos.dev@gmail.com" target="_blank" className="flex items-center justify-center bg-zinc-700 hover:bg-zinc-600 text-white rounded-full p-2 transition">
             <EnvelopeOpen size={32} weight="light" />
           </a>
-          <a href="https://www.youtube.com/channel/UCwWJEbTXyAjlYpSRfPedy4w" target="_blank" className="flex items-center justify-center bg-zinc-700 hover:bg-zinc-600 text-white rounded-full p-2 transition">
+          {/* <a href="https://www.youtube.com/channel/UCwWJEbTXyAjlYpSRfPedy4w" target="_blank" className="flex items-center justify-center bg-zinc-700 hover:bg-zinc-600 text-white rounded-full p-2 transition">
             <YoutubeLogo size={32} weight="light" />
           </a>
           <a href="https://www.instagram.com/buzz.paulo/" target="_blank" className="flex items-center justify-center bg-zinc-700 hover:bg-zinc-600 text-white rounded-full p-2 transition">
             <InstagramLogo size={32} weight="light" />
-          </a>
+          </a> */}
           <a href="https://medium.com/@paulo.campos.dev" target="_blank" className="flex items-center justify-center bg-zinc-700 hover:bg-zinc-600 text-white rounded-full p-2 transition">
             <MediumLogo size={32} weight="light" />
           </a>
@@ -90,7 +91,7 @@ export default function Home() {
           </a>
         </nav>
         <div className="text-end">
-          <button className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">Resume</button>
+          <a href="/software-engineer.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">Resume</a>
         </div>
       </div>
     </main>
