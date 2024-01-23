@@ -131,28 +131,28 @@ export const SkillData = [
 export const projects = [
     {
         id: '1',
-        image: '/dowhile.png',
+        image: '/imgs/dowhile.png',
         title: 'DoWhile',
         description: 'I actively participated in the development of a full-stack application for the DoWhile 2021 event, featuring real-time communication. Crafted during the Rocketseat NLW, we utilized socket.io to establish asynchronous communication with the server, implementing the async/await concept. An engaging experience, integrating technologies to achieve effective communication within the event context.',
         tecnologies: ['ReactJS', 'TypeScript', 'Styled Components', 'NodeJS', 'Prisma', 'Socket.io', 'React Native', 'Framer Motion', 'Moti', 'Elixir'],
     },
     {
         id: '2',
-        image: '/podcastr.png',
+        image: '/imgs/podcastr.png',
         title: 'Podcastr',
         description: 'Podcastr stands as a robust and comprehensive platform meticulously crafted to cater to the dynamic world of podcast broadcasting. This innovative and user-friendly platform serves as a haven for both seasoned podcasters and aspiring individuals looking to venture into the captivating realm of digital audio content creation.',
         tecnologies: ['Reactjs', 'Axios', 'date-fns', 'Next', 'Sass', 'NodeJS', 'TypeScript', 'json-server'],
     },
     {
         id: '3',
-        image: '/whereisthephp.jpg',
+        image: '/imgs/whereisthephp.jpg',
         title: 'WhereIsThePhp',
         description: 'Actively engaged in a Banco BTG onsite hackathon, I, along with three colleagues, spearheaded the development of the back-end for an impromptu application. We devised an innovative solution enabling users to use their dividends for bill payments, implementing queues and messaging for process optimization. An intense and rewarding experience, blending creativity and technical skills to tackle a real challenge in the financial sector.',
         tecnologies: ['Typescript', 'Vue', 'NodeJs', 'BullMQ', 'ExpressJs', 'Prisma', 'Docker', 'MySQL'],
     },
     {
         id: '4',
-        image: '/project-devmenthors.jpg',
+        image: '/imgs/project-devmenthors.jpg',
         title: 'DevMenthors',
         description: 'For a year, I contributed to the "DevMentors" project, teaching back-end programming, covering topics from basic routing to advanced concepts like databases, caching, and RabbitMQ messaging. We also delved into Docker container orchestration and application deployment, offering students practical insights into scalable development. This experience enriched both myself and the community, fostering collaboration and inspiration.',
         tecnologies: ['Typescript', 'Docker', 'NodeJs', 'ExpressJs', 'Vitest', 'Prisma', 'Redis', 'SQLite'],
