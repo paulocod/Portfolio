@@ -20,7 +20,7 @@ export default function Home() {
       <Header onButtonClick={(sectionId) => scrollToSection(sectionId)} />
       {/* homepage */}
       <section id="home" className="h-screen flex items-center justify-center mt-12 mb-20 relative z-10 overflow-hidden">
-        <Image src="/grid-home.svg" alt="Projeto 1" layout="fill" objectFit="cover" className="rounded-l-lg " />
+        <Image src="/grid-home.svg" alt="Projeto 1" layout="fill" className="rounded-l-lg object-cover" />
         <div className="h-1/2 text-center flex flex-col items-center">
           <h1 className="text-6xl mb-4">Hello.</h1>
           <h1 className="text-6xl mb-4">I’m <strong className="text-orange-500">Paulo</strong>, a software engineer</h1>
@@ -59,7 +59,7 @@ export default function Home() {
             src="/grid-footer.svg"
             alt="Sua Imagem"
             layout="fill"
-            objectFit="cover"
+            className="object-cover"
           />
         </div>
       </div>
