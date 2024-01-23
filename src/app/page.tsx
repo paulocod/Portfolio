@@ -91,7 +91,7 @@ export default function Home() {
           </a>
         </nav>
         <div className="text-end">
-          <a href="/file/software-engineer.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">Resume</a>
+          <a href="/files/software-engineer.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">Resume</a>
         </div>
       </div>
     </main>
