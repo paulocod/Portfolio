@@ -2,8 +2,8 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MovingIcons from "@/components/MovingItems";
-import ProjectCard from "@/components/ProjectCard";
-import { projects, InfoText } from "@/data";
+import Projects from "@/components/Projects";
+import { InfoText } from "@/data";
 import Image from 'next/image';
 
 export default function Home() {
@@ -33,14 +33,7 @@ export default function Home() {
         <h1 className="text-4xl mb-12">{InfoText.SkillsSectionText1}<strong className="text-orange-500"> & </strong>{InfoText.SkillsSectionText2}</h1>
         <MovingIcons />
       </div>
-      <div id="projects" className="my-40">
-        <div className="grid grid-cols-1 gap-8">
-          <h1 className="text-4xl mb-4">{InfoText.ProjectsSectionText1}</h1>
-          <ProjectCard
-            projects={projects}
-          />
-        </div>
-      </div>
+      <Projects />
       <div id="contact" className="my-12 flex items-center justify-between px-4">
         <div>
           <h1 className="text-4xl mb-2">{InfoText.FooterSectionText1}<strong className="text-orange-500">{InfoText.FooterSectionText2}</strong>?</h1>
