@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { InfoText } from "@/constants";
+import { InfoText } from "@/data";
 
 interface Project {
     id: string;

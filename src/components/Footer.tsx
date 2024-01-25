@@ -1,6 +1,6 @@
 import { DevToLogo, EnvelopeOpen, LinkedinLogo, MediumLogo } from "@phosphor-icons/react/dist/ssr"
 import Navbar from "./Navbar"
-import { InfoText } from "@/constants";
+import { InfoText } from "@/data";
 
 
 const Footer: React.FC = () => {

@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MovingIcons from "@/components/MovingItems";
 import ProjectCard from "@/components/ProjectCard";
-import { projects, InfoText } from "@/constants";
+import { projects, InfoText } from "@/data";
 import Image from 'next/image';
 
 export default function Home() {

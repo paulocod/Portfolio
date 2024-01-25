@@ -1,6 +1,6 @@
 import { HouseSimple } from "@phosphor-icons/react/dist/ssr";
 import Navbar from "./Navbar";
-import { InfoText } from "@/constants";
+import { InfoText } from "@/data";
 
 interface HeaderProps {
     onButtonClick: (sectionId: string) => void;
