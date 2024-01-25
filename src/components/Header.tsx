@@ -1,11 +1,13 @@
 import { HouseSimple } from "@phosphor-icons/react/dist/ssr";
+import Navbar from "./Navbar";
+import { InfoText } from "@/data";
 
 interface HeaderProps {
     onButtonClick: (sectionId: string) => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ onButtonClick }) => {
-    const handleButtonClick = (sectionId: string) => () => {
+    (sectionId: string) => {
         onButtonClick(sectionId);
     };
     return (
@@ -15,16 +17,17 @@ const Header: React.FC<HeaderProps> = ({ onButtonClick }) => {
                     Paulo.<strong className="text-orange-500">dev</strong>
                 </h1>
             </a>
-            <nav className="flex rounded-full place-content-center space-x-12 border-2 border-orange-500 place-items-center bg-zinc-800">
-                <button onClick={handleButtonClick('home')} className="items-center justify-center hover:bg-zinc-600 text-white rounded-full p-2 transition">
-                    <HouseSimple size={32} />
-                </button>
-                <button onClick={handleButtonClick('about')} className="text-center text-white p-2 rounded-full hover:bg-zinc-700 transition">About</button>
-                <button onClick={handleButtonClick('projects')} className="text-center text-white p-2 rounded-full hover:bg-zinc-700 transition">Projects</button>
-                <button onClick={handleButtonClick('contact')} className="text-center text-white p-2 rounded-full hover:bg-zinc-700 transition">Contact me</button>
-            </nav>
+            <Navbar
+                onButtonClick={onButtonClick}
+                buttons={[
+                    { icon: <HouseSimple size={32} />, section: 'home' },
+                    { label: InfoText.NavbarButtonsText1, section: 'about' },
+                    { label: InfoText.NavbarButtonsText2, section: 'projects' },
+                    { label: InfoText.NavbarButtonsText3, section: 'contact' },
+                ]}
+            />
             <div className="text-end">
-                <a href="/files/software-engineer.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">Resume</a>
+                <a href="/Portfolio/files/software-engineer.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">{InfoText.ResumeButton}</a>
             </div>
         </header>
     );
