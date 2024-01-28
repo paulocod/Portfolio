@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ onButtonClick }) => {
                 ]}
             />
             <div className="text-end">
-                <a href="/files/software-engineer.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">{InfoText.ResumeButton}</a>
+                <a href="/files/software-engineer-backend.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">{InfoText.ResumeButton}</a>
             </div>
         </header>
     );
