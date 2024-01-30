@@ -1,9 +1,10 @@
 import { DevToLogo, EnvelopeOpen, LinkedinLogo, MediumLogo } from "@phosphor-icons/react/dist/ssr"
 import Navbar from "./Navbar"
-import { InfoText } from "@/data";
-
+import { useTranslations } from 'next-intl';
 
 const Footer: React.FC = () => {
+    const t = useTranslations('InfoText');
+
     return (
         <div className="my-12 grid grid-cols-3 gap-12 items-center">
             <div className="text-start">
@@ -20,7 +21,7 @@ const Footer: React.FC = () => {
                 ]}
             />
             <div className="text-end">
-                <a href="/files/software-engineer.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">{InfoText.ResumeButton}</a>
+                <a href="/files/software-engineer.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">{t('ResumeButton')}</a>
             </div>
         </div>
     )
