@@ -1,0 +1,25 @@
+{
+    "InfoText": {
+        "ResumeButton": "Currículo",
+        "NavbarButtonsText1": "Sobre",
+        "NavbarButtonsText2": "Projetos",
+        "NavbarButtonsText3": "Contatos",
+        "HomeSectionText1": "Olá.",
+        "HomeSectionText2": "Eu sou o",
+        "HomeSectionText3": "Paulo, ",
+        "HomeSectionText4": "um engenheiro de software",
+        "HomeSectionText5": "venha explorar o mundo atráves do ",
+        "HomeSectionText6": "CÓDIGO",
+        "AboutSectionText1": "Sobre ",
+        "AboutSectionText2": "mim",
+        "AboutSectionText3": "Desenvolvedor com experiência em desenvolvimento de software. Possuo bacharelado em Ciência da Computação. Sou especializado no uso de Node.js e muito mais, comprometido em entregar soluções tecnológicas escaláveis e de alto impacto. Possuindo um sólido conhecimento em desenvolvimento back-end, Com tecnologias como TypeScript, Python, Apache, Redis, PostgreSQL e AWS. Entusiasmado em criar experiências de usuário excepcionais e melhorar a eficiência e a qualidade do software.",
+        "SkillsSectionText1": "Habilidades",
+        "SkillsSectionText2": "Tecnologias",
+        "ProjectsSectionText1": "Projetos",
+        "ProjectCardText1": "Descrição",
+        "ProjectCardText2": "tecnologias",
+        "FooterSectionText1": "Teve alguma ideia de ",
+        "FooterSectionText2": "projeto",
+        "FooterSectionText3": "Unindo ideias ao código: criando realidades digitais do conceito à conclusão. Transformando Visão em Soluções de Software Acionáveis com Precisão e Paixão."
+    }
+}
