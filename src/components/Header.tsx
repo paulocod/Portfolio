@@ -1,12 +1,14 @@
 import { HouseSimple } from "@phosphor-icons/react/dist/ssr";
 import Navbar from "./Navbar";
-import { InfoText } from "@/data";
+import { useTranslations } from 'next-intl';
 
 interface HeaderProps {
     onButtonClick: (sectionId: string) => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ onButtonClick }) => {
+    const t = useTranslations('InfoText');
+
     (sectionId: string) => {
         onButtonClick(sectionId);
     };
@@ -21,13 +23,13 @@ const Header: React.FC<HeaderProps> = ({ onButtonClick }) => {
                 onButtonClick={onButtonClick}
                 buttons={[
                     { icon: <HouseSimple size={32} />, section: 'home' },
-                    { label: InfoText.NavbarButtonsText1, section: 'about' },
-                    { label: InfoText.NavbarButtonsText2, section: 'projects' },
-                    { label: InfoText.NavbarButtonsText3, section: 'contact' },
+                    { label: t('NavbarButtonsText1'), section: 'about' },
+                    { label: t('NavbarButtonsText2'), section: 'projects' },
+                    { label: t('NavbarButtonsText3'), section: 'contact' },
                 ]}
             />
             <div className="text-end">
-                <a href="/Portfolio/files/software-engineer.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">{InfoText.ResumeButton}</a>
+                <a href="/Portfolio/files/software-engineer.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">{t('ResumeButton')}</a>
             </div>
         </header>
     );
