@@ -3,7 +3,10 @@ import Navbar from "./Navbar"
 import { useTranslations } from 'next-intl';
 
 const Footer: React.FC = () => {
+    const storedLocale = localStorage.getItem('currentLocale') || 'en';
     const t = useTranslations('InfoText');
+
+    const resumePath = storedLocale === 'pt' ? 'software-engineer.pdf' : 'desenvolvedor.pdf';
 
     return (
         <div className="my-12 grid grid-cols-3 gap-12 items-center">
@@ -21,7 +24,13 @@ const Footer: React.FC = () => {
                 ]}
             />
             <div className="text-end">
-                <a href="/files/software-engineer.pdf" target="_blank" className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition">{t('ResumeButton')}</a>
+                <a
+                    href={`/files/${resumePath}`}
+                    target="_blank"
+                    className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition"
+                >
+                    {t('ResumeButton')}
+                </a>
             </div>
         </div>
     )

@@ -1,27 +1,3 @@
-export const InfoText = {
-    ResumeButton: 'Resume',
-    NavbarButtonsText1: 'About',
-    NavbarButtonsText2: 'Projects',
-    NavbarButtonsText3: 'Contact me',
-    HomeSectionText1: 'Hello.',
-    HomeSectionText2: 'I\'m',
-    HomeSectionText3: 'Paulo, ',
-    HomeSectionText4: 'a software engineer',
-    HomeSectionText5: 'Come explore the world by the ',
-    HomeSectionText6: 'CODE',
-    AboutSectionText1: 'About ',
-    AboutSectionText2: 'me',
-    AboutSectionText3: 'Developer with substantial experience in software development. Holds a Bachelors degree in Computer Science. Specialized in using Node.js and more, committed to delivering scalable and high-impact technological solutions. Possesses a robust background in web and mobile development, showcasing expertise in TypeScript, Python, Apache, Redis, PostgreSQL, and AWS. Enthusiastic about crafting exceptional user experiences and improving software efficiency and quality.',
-    SkillsSectionText1: 'Skills',
-    SkillsSectionText2: 'technologies',
-    ProjectsSectionText1: 'Projects',
-    ProjectCardText1: 'Description',
-    ProjectCardText2: 'technologies',
-    FooterSectionText1: 'Have idea about ',
-    FooterSectionText2: 'project',
-    FooterSectionText3: 'Bridging Ideas with Code: Crafting Digital Realities from Concept to Completion. Transforming Vision into Actionable Software Solutions with Precision and Passion.',
-}
-
 export const SkillData = [
     {
         name: "Html 5",

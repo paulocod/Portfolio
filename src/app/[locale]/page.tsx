@@ -20,7 +20,7 @@ export default function Home() {
     <main className="px-48">
       <Header onButtonClick={(sectionId) => scrollToSection(sectionId)} />
       <section id="home" className="h-screen flex items-center justify-center mt-12 mb-20 relative z-10 overflow-hidden">
-        <Image src="/imgs/grid-home.svg" alt="Projeto 1" layout="fill" className="rounded-l-lg object-cover" />
+        <Image src="/imgs/grid-home.svg" alt="Projeto 1" fill className="rounded-l-lg object-cover" />
         <div className="h-1/2 text-center flex flex-col items-center">
           <h1 className="text-6xl mb-4">{t('HomeSectionText1')}</h1>
           <h1 className="text-6xl mb-4">{t('HomeSectionText2')} <strong className="text-orange-500">{t('HomeSectionText3')}</strong>{t('HomeSectionText4')}</h1>
@@ -45,8 +45,7 @@ export default function Home() {
           <Image
             src="/imgs/grid-footer.svg"
             alt="grid image"
-            layout="fill"
-            className="object-cover"
+            fill
           />
         </div>
       </div>

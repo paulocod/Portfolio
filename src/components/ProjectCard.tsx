@@ -22,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ projects }) => {
                 <div key={project.id} className="bg-zinc-800 rounded-lg overflow-hidden shadow-md flex">
                     <div className="w-1/2 h-96 relative">
                         <div className="p-14">
-                            <Image src={project.image} alt={project.title} layout="fill" className="rounded-l-lg object-cover" />
+                            <Image src={project.image} alt={project.title} fill className="rounded-l-lg object-cover" />
                         </div>
                     </div>
                     <div className="p-4 w-1/2">
