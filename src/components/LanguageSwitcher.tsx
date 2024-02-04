@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 const Switcher = () => {
-    const storedLocale = localStorage.getItem('currentLocale') || 'en';
-    const storedIsOn = localStorage.getItem('isOn') === 'true';
+    const storedLocale = typeof localStorage !== 'undefined' ? localStorage.getItem('currentLocale') || 'en' : 'en';
+    const storedIsOn = typeof localStorage !== 'undefined' ? localStorage.getItem('isOn') === 'true' : false;
 
     const [currentLocale, setCurrentLocale] = useState(storedLocale);
     const [isOn, setIsOn] = useState(storedIsOn);

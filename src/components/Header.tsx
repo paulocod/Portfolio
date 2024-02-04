@@ -8,7 +8,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ onButtonClick }) => {
-    const storedLocale = localStorage.getItem('currentLocale') || 'en';
+    const storedLocale = typeof localStorage !== 'undefined' ? localStorage.getItem('currentLocale') || 'en' : 'en';
     const t = useTranslations('InfoText');
 
     const resumePath = storedLocale === 'pt' ? 'software-engineer.pdf' : 'desenvolvedor.pdf';
@@ -18,12 +18,12 @@ const Header: React.FC<HeaderProps> = ({ onButtonClick }) => {
     };
 
     return (
-        <header className="my-12 grid grid-cols-3 gap-12 items-center">
-            <a href="/" className="text-start">
-                <h1 className="text-2xl">
+        <div className="my-12 grid grid-cols-3 gap-12 items-center">
+            <div className="text-start">
+                <a href="/" className="text-2xl">
                     Paulo.<strong className="text-orange-500">dev</strong>
-                </h1>
-            </a>
+                </a>
+            </div>
             <Navbar
                 onButtonClick={handleButtonClick}
                 buttons={[
@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ onButtonClick }) => {
                     {t('ResumeButton')}
                 </a>
             </div>
-        </header>
+        </div>
     );
 };
 

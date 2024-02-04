@@ -3,7 +3,7 @@ import Navbar from "./Navbar"
 import { useTranslations } from 'next-intl';
 
 const Footer: React.FC = () => {
-    const storedLocale = localStorage.getItem('currentLocale') || 'en';
+    const storedLocale = typeof localStorage !== 'undefined' ? localStorage.getItem('currentLocale') || 'en' : 'en';
     const t = useTranslations('InfoText');
 
     const resumePath = storedLocale === 'pt' ? 'software-engineer.pdf' : 'desenvolvedor.pdf';
@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
     return (
         <div className="my-12 grid grid-cols-3 gap-12 items-center">
             <div className="text-start">
-                <a href="\" className="text-2xl">
+                <a href="/" className="text-2xl">
                     Paulo.<strong className="text-orange-500">dev</strong>
                 </a>
             </div>
