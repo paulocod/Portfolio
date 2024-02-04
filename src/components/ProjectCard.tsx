@@ -1,12 +1,17 @@
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
 
+interface Technology {
+    name: string;
+    color: string;
+}
+
 interface Project {
     id: string;
     image: string;
     title: string;
     description: string;
-    tecnologies: string[];
+    technologies: Technology[];
 }
 
 interface ProjectCardProps {
@@ -19,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ projects }) => {
     return (
         <>
             {projects.map((project) => (
-                <div key={project.id} className="bg-zinc-800 rounded-lg overflow-hidden shadow-md flex">
+                <div key={project.id} className="rounded-lg overflow-hidden shadow-md flex bg-zinc-800 hover:bg-zinc-700 transition duration-300 transform hover:scale-105">
                     <div className="w-1/2 h-96 relative">
                         <div className="p-14">
                             <Image src={project.image} alt={project.title} fill className="rounded-l-lg object-cover" />
@@ -33,9 +38,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ projects }) => {
                         </p>
                         <h2 className="py-4 text-orange-500">{t('ProjectCardText2')}</h2>
                         <div className="flex flex-wrap gap-4">
-                            {project.tecnologies.map((technology) => (
-                                <div key={technology} className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition duration-300">
-                                    <p>{technology}</p>
+                            {project.technologies.map((technology) => (
+                                <div key={technology.name} className="p-2 rounded-lg transform transition duration-300 hover:scale-105" style={{ backgroundColor: technology.color }}>
+                                    <p>{technology.name}</p>
                                 </div>
                             ))}
                         </div>
