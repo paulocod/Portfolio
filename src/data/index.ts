@@ -146,7 +146,7 @@ export const projects = [
             { name: 'Moti', color: '#ff64da' },
             { name: 'Elixir', color: '#6e3d6e' },
         ],
-        githubLink: ''
+        githubLink: 'https://github.com/paulocod/DoWhileHeat'
     },
     {
         id: '2',
@@ -163,7 +163,7 @@ export const projects = [
             { name: 'TypeScript', color: '#61dafb' },
             { name: 'json-server', color: '#ff5e92' },
         ],
-        githubLink: ''
+        githubLink: 'https://github.com/paulocod/Podcastr'
     },
     {
         id: '3',
@@ -180,7 +180,7 @@ export const projects = [
             { name: 'Docker', color: '#ff64da' },
             { name: 'MySQL', color: '#6e3d6e' },
         ],
-        githubLink: ''
+        githubLink: 'https://github.com/orgs/hackathonbtg32/repositories'
     },
     {
         id: '4',
@@ -197,6 +197,6 @@ export const projects = [
             { name: 'Redis', color: '#ff64da' },
             { name: 'SQLite', color: '#6e3d6e' },
         ],
-        githubLink: ''
+        githubLink: 'https://www.cps.sp.gov.br/projeto-devmenthors-e-concluido-com-apresentacao-para-pais-e-empresas-em-marilia/'
     },
 ];
