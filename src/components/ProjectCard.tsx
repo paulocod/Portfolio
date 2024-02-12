@@ -23,16 +23,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
     return (
         <>
-            <div key={project.id} className="rounded-lg overflow-hidden shadow-md flex bg-zinc-800 hover:bg-zinc-700 transition duration-300 transform hover:scale-105">
-                <div className="w-1/2 h-96 relative">
+            <div key={project.id} className="rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row bg-zinc-800 hover:bg-zinc-700 transition duration-300 transform hover:scale-105">
+                <div className="w-full md:w-1/2 relative">
                     <div className="p-14">
-                        <Image src={project.image} alt={project.title} fill className="rounded-l-lg object-cover" />
+                        <Image src={project.image} alt={project.title} fill className="rounded-t-lg md:rounded-l-lg md:rounded-t-none object-cover" />
                     </div>
                 </div>
-                <div className="p-4 w-1/2">
+                <div className="p-4 w-full md:w-1/2">
                     <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
                     <h2 className="text-orange-500">{t('ProjectCardText1')}</h2>
-                    <p className="max-w-full overflow-hidden overflow-ellipsis">
+                    <p className="max-w-full overflow-hidden overflow-ellipsis line-clamp-4 md:line-clamp-none">
                         {project.description}
                     </p>
                     <h2 className="py-4 text-orange-500">{t('ProjectCardText2')}</h2>
