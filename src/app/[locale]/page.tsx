@@ -5,6 +5,9 @@ import MovingIcons from "@/components/MovingItems";
 import Projects from "@/components/Projects";
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import MobileMenu from "@/components/MobileHeader";
+import Navbar from "@/components/Navbar";
+import { DevToLogo, EnvelopeOpen, LinkedinLogo, MediumLogo } from "@phosphor-icons/react/dist/ssr";
 
 export default function Home() {
   const t = useTranslations('InfoText');
@@ -18,7 +21,12 @@ export default function Home() {
   };
   return (
     <main className="px-8 md:px-16 lg:px-32 xl:px-48">
-      <Header onButtonClick={(sectionId) => scrollToSection(sectionId)} />
+      <div className="hidden lg:contents">
+        <Header onButtonClick={(sectionId) => scrollToSection(sectionId)} />
+      </div>
+      <div className="my-12 lg:hidden">
+        <MobileMenu />
+      </div>
       <section id="home" className="h-screen flex items-center justify-center mt-12 mb-20 relative z-10 overflow-hidden">
         <Image src="/imgs/grid-home.svg" alt="background image" fill className="object-cover" />
         <div className="h-1/2 text-center flex flex-col items-center">
@@ -63,7 +71,19 @@ export default function Home() {
           />
         </div>
       </div>
-      <Footer />
+      <div className="hidden lg:contents">
+        <Footer />
+      </div>
+      <div className="my-12 lg:hidden">
+        <Navbar
+          buttons={[
+            { icon: <LinkedinLogo size={32} />, link: 'https://www.linkedin.com/in/paulovcampos/' },
+            { icon: <EnvelopeOpen size={32} />, link: 'mailto:paulo.campos.dev@gmail.com' },
+            { icon: <MediumLogo size={32} />, link: 'https://medium.com/@paulo.campos.dev' },
+            { icon: <DevToLogo size={32} />, link: 'https://dev.to/paulocod' },
+          ]}
+        />
+      </div>
     </main>
   );
 }
