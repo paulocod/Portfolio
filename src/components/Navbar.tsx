@@ -12,7 +12,7 @@ type NavbarProps = {
 
 const Navbar: React.FC<NavbarProps> = ({ onButtonClick, buttons }) => {
     return (
-        <nav className="flex flex-wrap justify-around rounded-full border-2 border-orange-500 bg-zinc-800">
+        <nav className="flex flex-wrap justify-around items-center rounded-full border-2 border-orange-500 bg-zinc-800">
             {buttons.map((button, index) => (
                 <a key={index} href={button.link || undefined} target={button.link ? "_blank" : undefined}>
                     <button onClick={() => onButtonClick && onButtonClick(button.section || '')}
