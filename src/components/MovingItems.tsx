@@ -8,7 +8,7 @@ import { Autoplay } from "swiper/modules";
 
 const MovingItems = () => {
     return (
-        <div className="space-y-20">
+        <div className="space-y-8 md:space-y-20">
             <Swiper
                 slidesPerView={5}
                 loop={true}
@@ -18,6 +18,7 @@ const MovingItems = () => {
                 }}
                 speed={5000}
                 modules={[Autoplay]}
+                spaceBetween={10}
             >
                 {SkillData.map((skill, index) => (
                     <SwiperSlide key={index}>
@@ -40,6 +41,7 @@ const MovingItems = () => {
                 }}
                 speed={5000}
                 modules={[Autoplay]}
+                spaceBetween={10}
             >
                 {SkillData.map((skill, index) => (
                     <SwiperSlide key={index}>
