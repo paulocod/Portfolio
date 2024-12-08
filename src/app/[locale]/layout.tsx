@@ -24,12 +24,12 @@ type Props = {
 const RootLayout: React.FC<Props> = ({
   children,
   params: { locale }
-}) => {
+}: Props) => {
   const messages = useMessages()
   return (
     <html className={jetBrains.className} lang={locale}>
       <body className="bg-zinc-900 text-zinc-50">
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
       </body>
