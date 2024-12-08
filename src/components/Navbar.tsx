@@ -1,29 +1,68 @@
-import React, { ReactNode } from 'react';
+"use client";
+
+import React, { ReactNode } from "react";
+import { motion } from "framer-motion";
+
+type NavbarButton = {
+  section?: string;
+  icon?: ReactNode;
+  label?: string;
+  link?: string;
+};
 
 type NavbarProps = {
-    onButtonClick?: (sectionId: string) => void;
-    buttons: {
-        section?: string;
-        icon?: ReactNode;
-        label?: string;
-        link?: string;
-    }[];
+  onButtonClick?: (sectionId: string) => void;
+  buttons: NavbarButton[];
 };
 
-const Navbar: React.FC<NavbarProps> = ({ onButtonClick, buttons }) => {
-    return (
-        <nav className="flex flex-wrap justify-around items-center rounded-full border-2 border-orange-500 bg-zinc-800">
-            {buttons.map((button, index) => (
-                <a key={index} href={button.link || undefined} target={button.link ? "_blank" : undefined}>
-                    <button onClick={() => onButtonClick && onButtonClick(button.section || '')}
-                        className="flex items-center justify-center hover:bg-zinc-600 text-white rounded-full p-2 transition">
-                        {button.icon}
-                        <span className="hidden md:block">{button.label}</span>
-                    </button>
-                </a>
-            ))}
-        </nav>
-    );
+const NavbarItem: React.FC<{
+  button: NavbarButton;
+  onButtonClick?: (sectionId: string) => void;
+}> = ({ button, onButtonClick }) => {
+  const { section, icon, label, link } = button;
+
+  const handleClick = () => {
+    if (section && onButtonClick) onButtonClick(section);
+  };
+
+  return link ? (
+    <motion.a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center justify-center text-white hover:bg-zinc-600 rounded-full p-2 transition"
+      aria-label={label}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      {icon}
+      {label && <span className="hidden md:block">{label}</span>}
+    </motion.a>
+  ) : (
+    <motion.button
+      onClick={handleClick}
+      className="flex items-center justify-center text-white hover:bg-zinc-600 rounded-full p-2 transition"
+      aria-label={label}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      {icon}
+      {label && <span className="hidden md:block">{label}</span>}
+    </motion.button>
+  );
 };
+
+const Navbar: React.FC<NavbarProps> = ({ onButtonClick, buttons }) => (
+  <motion.nav
+    className="flex flex-wrap justify-around items-center rounded-full border-2 border-orange-500 bg-zinc-800"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+  >
+    {buttons.map((button, index) => (
+      <NavbarItem key={index} button={button} onButtonClick={onButtonClick} />
+    ))}
+  </motion.nav>
+);
 
 export default Navbar;
