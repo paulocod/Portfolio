@@ -18,7 +18,7 @@ export default function Home() {
   const scrollToSection = useScrollToSection();
 
   return (
-    <main className="px-8 md:px-16 lg:px-32 xl:px-48">
+    <main id="main-content" className="px-8 md:px-16 lg:px-32 xl:px-48">
       <div className="hidden lg:block">
         <Header onButtonClick={scrollToSection} />
       </div>

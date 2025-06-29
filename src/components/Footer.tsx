@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={button.icon}
-                className="flex items-center gap-2 text-white hover:bg-zinc-600 rounded-full p-2 transition border border-orange-500"
+                className="flex items-center gap-2 text-white hover:bg-zinc-600 rounded-full p-2 transition border border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
               >
                 <Icon size={32} />
                 <span className="font-medium text-sm text-white">{button.name}</span>

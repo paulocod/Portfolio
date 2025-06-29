@@ -28,7 +28,8 @@
         "ProjectDevMenthorsDescription": "For a year, I contributed to the DevMentors project, teaching back-end programming, covering topics from basic routing to advanced concepts like databases, caching, and RabbitMQ messaging. We also delved into Docker container orchestration and application deployment, offering students practical insights into scalable development. This experience enriched both myself and the community, fostering collaboration and inspiration.",
         "FooterSectionText1": "Have idea about ",
         "FooterSectionText2": "project",
-        "FooterSectionText3": "Bridging Ideas with Code: Crafting Digital Realities from Concept to Completion. Transforming Vision into Actionable Software Solutions with Precision and Passion."
+        "FooterSectionText3": "Bridging Ideas with Code: Crafting Digital Realities from Concept to Completion. Transforming Vision into Actionable Software Solutions with Precision and Passion.",
+        "ProjectCardButtonSeeProject": "See project"
     },
     "NotFound": {
         "Title": "404",
