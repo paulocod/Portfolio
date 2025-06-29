@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
-import { getResumePath } from "@/utils/helpers";
-import { usePathname } from "next/navigation";
-import contactButtons, { contactIcons } from "@/data/contactButtons";
+import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
+import { getResumePath } from '@/utils/helpers';
+import { usePathname } from 'next/navigation';
+import contactButtons, { contactIcons } from '@/data/contactButtons';
 
 const Footer: React.FC = () => {
-  const t = useTranslations("InfoText");
+  const t = useTranslations('InfoText');
   const pathname = usePathname();
-  const isPt = pathname.startsWith("/pt");
-  const locale = isPt ? "pt" : "en";
+  const isPt = pathname.startsWith('/pt');
+  const locale = isPt ? 'pt' : 'en';
   const resumePath = getResumePath(locale);
 
   return (
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
         className="my-12 grid grid-cols-3 gap-12 items-center"
       >
         <div className="text-start">
@@ -40,7 +40,9 @@ const Footer: React.FC = () => {
                 className="flex items-center gap-2 text-white hover:bg-zinc-600 rounded-full p-2 transition border border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
               >
                 <Icon size={32} />
-                <span className="font-medium text-sm text-white">{button.name}</span>
+                <span className="font-medium text-sm text-white">
+                  {button.name}
+                </span>
               </a>
             );
           })}
@@ -55,7 +57,7 @@ const Footer: React.FC = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            {t("ResumeButton")}
+            {t('ResumeButton')}
           </motion.a>
         </div>
       </motion.div>

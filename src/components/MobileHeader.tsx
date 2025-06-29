@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
-import Switcher from "./LanguageSwitcher";
-import { usePathname } from "next/navigation";
-import { DownloadSimple } from "@phosphor-icons/react";
+import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
+import Switcher from './LanguageSwitcher';
+import { usePathname } from 'next/navigation';
+import { DownloadSimple } from '@phosphor-icons/react';
 
 const getResumePath = (locale: string): string =>
-  locale === "pt" ? "software-engineer.pdf" : "desenvolvedor.pdf";
+  locale === 'pt' ? 'software-engineer.pdf' : 'desenvolvedor.pdf';
 
 const MobileHeader: React.FC = () => {
   const pathname = usePathname();
-  const isPt = pathname.startsWith("/pt");
-  const locale = isPt ? "pt" : "en";
-  const t = useTranslations("InfoText");
+  const isPt = pathname.startsWith('/pt');
+  const locale = isPt ? 'pt' : 'en';
+  const t = useTranslations('InfoText');
 
   const resumePath = getResumePath(locale);
 
@@ -33,7 +33,7 @@ const MobileHeader: React.FC = () => {
           rel="noopener noreferrer"
           className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition flex items-center gap-2"
         >
-          {t("ResumeButton")}
+          {t('ResumeButton')}
           <DownloadSimple size={20} />
         </a>
       </div>

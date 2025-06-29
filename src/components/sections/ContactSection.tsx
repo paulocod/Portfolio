@@ -1,8 +1,8 @@
-import React from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { contactIcons, ContactButton } from "@/data/contactButtons";
-import contactButtons from "@/data/contactButtons";
+import React from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { contactIcons, ContactButton } from '@/data/contactButtons';
+import contactButtons from '@/data/contactButtons';
 
 type Props = {
   t: any;
@@ -20,14 +20,11 @@ const ContactSection: React.FC<Props> = ({ t, contactButtons }) => (
   >
     <div>
       <h1 className="text-2xl mb-2 md:text-3xl xl:text-4xl">
-        {t("FooterSectionText1")}
-        <strong className="text-orange-500">
-          {t("FooterSectionText2")}
-        </strong>
-        ?
+        {t('FooterSectionText1')}
+        <strong className="text-orange-500">{t('FooterSectionText2')}</strong>?
       </h1>
       <p className="text-base mb-4 xl:text-xl xl:w-2/3">
-        {t("FooterSectionText3")}
+        {t('FooterSectionText3')}
       </p>
     </div>
     <div className="relative w-96 h-96">

@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import React, { ReactNode } from "react";
-import { motion } from "framer-motion";
-import { contactIcons } from "@/data/contactButtons";
+import React, { ReactNode } from 'react';
+import { motion } from 'framer-motion';
+import { contactIcons } from '@/data/contactButtons';
 
 type NavbarButton = {
   section?: string;
@@ -27,7 +27,10 @@ const NavbarItem: React.FC<{
   };
 
   // Renderizar ícone dinamicamente se for string
-  const IconComponent = typeof icon === "string" ? contactIcons[icon as keyof typeof contactIcons] : null;
+  const IconComponent =
+    typeof icon === 'string'
+      ? contactIcons[icon as keyof typeof contactIcons]
+      : null;
 
   return link ? (
     <motion.a
@@ -35,7 +38,7 @@ const NavbarItem: React.FC<{
       target="_blank"
       rel="noopener noreferrer"
       className="navbar-button flex items-center justify-center text-white hover:bg-zinc-600 rounded-full p-2 transition focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 relative"
-      aria-label={label || (typeof icon === "string" ? icon : undefined)}
+      aria-label={label || (typeof icon === 'string' ? icon : undefined)}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       title={label}
@@ -73,7 +76,7 @@ const Navbar: React.FC<NavbarProps> = ({ onButtonClick, buttons }) => (
     className="flex flex-wrap justify-around items-center rounded-full border-2 border-orange-500 bg-zinc-800"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    transition={{ duration: 0.6, ease: "easeOut" }}
+    transition={{ duration: 0.6, ease: 'easeOut' }}
     aria-label="Navegação principal"
   >
     {buttons.map((button, index) => (

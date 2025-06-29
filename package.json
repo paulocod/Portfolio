@@ -6,9 +6,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy": "npm run build && touch out/.nojekyll && gh-pages -d out -b gh-pages",
+    "export": "next build && next export",
+    "deploy": "npm run export && touch out/.nojekyll && gh-pages -d out -b gh-pages",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write .",
+    "analyze": "NEXT_PUBLIC_ANALYZE=true next build",
+    "format:check": "prettier --check .",
+    "check": "npm run lint && npm run format:check"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.15",
@@ -24,10 +29,13 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0",
-    "gh-pages": "^6.1.1",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.1.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "gh-pages": "^6.3.0",
     "postcss": "^8",
+    "prettier": "^3.6.2",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }

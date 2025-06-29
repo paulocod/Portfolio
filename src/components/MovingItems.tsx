@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { skills } from "@/data/skills";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { Autoplay } from "swiper/modules";
-import { Keyboard } from "swiper/modules";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { skills } from '@/data/skills';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { Autoplay } from 'swiper/modules';
+import { Keyboard } from 'swiper/modules';
 
 const SkillSwiper: React.FC<{ reverseDirection?: boolean }> = ({
   reverseDirection = false,
@@ -28,7 +28,11 @@ const SkillSwiper: React.FC<{ reverseDirection?: boolean }> = ({
     aria-label="Lista de habilidades"
   >
     {skills.map((skill) => (
-      <SwiperSlide key={skill.name} aria-label={`Skill: ${skill.name}`} role="listitem">
+      <SwiperSlide
+        key={skill.name}
+        aria-label={`Skill: ${skill.name}`}
+        role="listitem"
+      >
         <motion.div
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
@@ -50,7 +54,7 @@ const MovingItems: React.FC = () => (
   <motion.div
     initial={{ opacity: 0, x: -50 }}
     animate={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
+    transition={{ duration: 0.8, ease: 'easeOut' }}
     className="space-y-8 md:space-y-20"
   >
     <SkillSwiper />

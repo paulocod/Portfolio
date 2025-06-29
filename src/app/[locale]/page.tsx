@@ -1,20 +1,20 @@
-"use client";
+'use client';
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Projects from "@/components/Projects";
-import { useTranslations } from "next-intl";
-import MobileMenu from "@/components/MobileHeader";
-import { useScrollToSection } from "@/hooks/useScrollToSection";
-import Navbar from "@/components/Navbar";
-import HomeSection from "../../components/sections/HomeSection";
-import AboutSection from "../../components/sections/AboutSection";
-import SkillsSection from "../../components/sections/SkillsSection";
-import ContactSection from "../../components/sections/ContactSection";
-import contactButtons from "../../data/contactButtons";
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import Projects from '@/components/Projects';
+import { useTranslations } from 'next-intl';
+import MobileMenu from '@/components/MobileHeader';
+import { useScrollToSection } from '@/hooks/useScrollToSection';
+import Navbar from '@/components/Navbar';
+import HomeSection from '../../components/sections/HomeSection';
+import AboutSection from '../../components/sections/AboutSection';
+import SkillsSection from '../../components/sections/SkillsSection';
+import ContactSection from '../../components/sections/ContactSection';
+import contactButtons from '../../data/contactButtons';
 
 export default function Home() {
-  const t = useTranslations("InfoText");
+  const t = useTranslations('InfoText');
   const scrollToSection = useScrollToSection();
 
   return (

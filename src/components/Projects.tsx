@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { projects } from "@/data/projects";
-import ProjectCard from "./ProjectCard";
-import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { projects } from '@/data/projects';
+import ProjectCard from './ProjectCard';
+import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
 const Projects: React.FC = () => {
-  const t = useTranslations("InfoText");
+  const t = useTranslations('InfoText');
 
   return (
     <motion.section
@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
           id="projects-heading"
           className="text-2xl mb-4 md:text-3xl xl:text-4xl"
         >
-          {t("ProjectsSectionText1")}
+          {t('ProjectsSectionText1')}
         </h1>
       </header>
 
@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
           ))
         ) : (
           <p className="text-center text-gray-400">
-            {t("NoProjectsAvailable")}
+            {t('NoProjectsAvailable')}
           </p>
         )}
       </div>

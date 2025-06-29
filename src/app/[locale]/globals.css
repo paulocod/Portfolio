@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 body::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
+  width: 8px;
+  background: transparent;
 }
 body::-webkit-scrollbar-thumb {
-    background: #a1a1aa;
-    border-radius: 4px;
+  background: #a1a1aa;
+  border-radius: 4px;
 }
 
 .navbar-button:focus {

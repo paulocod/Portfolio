@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
 interface Technology {
   name: string;
@@ -20,14 +20,14 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const t = useTranslations("InfoText");
+  const t = useTranslations('InfoText');
 
   return (
     <motion.article
       initial={{ scale: 0.9, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
       className="rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row bg-zinc-800 hover:bg-zinc-700 transition duration-300 transform hover:scale-105"
       tabIndex={0}
     >
@@ -43,11 +43,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       {/* Conteúdo textual */}
       <div className="p-4 w-full md:w-1/2">
         <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-        <h3 className="text-orange-500">{t("ProjectCardText1")}</h3>
+        <h3 className="text-orange-500">{t('ProjectCardText1')}</h3>
         <p className="max-w-full overflow-hidden overflow-ellipsis line-clamp-3 lg:line-clamp-none">
-          {t(project.descriptionKey)}{" "}
+          {t(project.descriptionKey)}{' '}
         </p>
-        <h3 className="py-4 text-orange-500">{t("ProjectCardText2")}</h3>
+        <h3 className="py-4 text-orange-500">{t('ProjectCardText2')}</h3>
         <div className="flex flex-wrap gap-4">
           {project.technologies.map((tech) => (
             <div
@@ -66,7 +66,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           className="inline-block mt-4 bg-orange-500 text-white rounded-full py-2 px-4 border-2 hover:bg-orange-600 transition font-medium focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
           aria-label={`Ver projeto ${project.title} no GitHub`}
         >
-          {t("ProjectCardButtonSeeProject")}
+          {t('ProjectCardButtonSeeProject')}
         </a>
       </div>
     </motion.article>
