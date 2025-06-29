@@ -25,5 +25,10 @@
         "FooterSectionText1": "Have idea about ",
         "FooterSectionText2": "project",
         "FooterSectionText3": "Bridging Ideas with Code: Crafting Digital Realities from Concept to Completion. Transforming Vision into Actionable Software Solutions with Precision and Passion."
+    },
+    "NotFound": {
+        "Title": "404",
+        "Description": "The page you are looking for was not found.",
+        "Button": "Back to home page"
     }
 }

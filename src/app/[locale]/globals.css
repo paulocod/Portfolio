@@ -3,5 +3,10 @@
 @tailwind utilities;
 
 body::-webkit-scrollbar {
-    display: none;
+    width: 8px;
+    background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+    background: #a1a1aa;
+    border-radius: 4px;
 }

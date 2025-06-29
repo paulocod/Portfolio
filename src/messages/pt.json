@@ -25,5 +25,10 @@
         "FooterSectionText1": "Teve alguma ideia de ",
         "FooterSectionText2": "projeto",
         "FooterSectionText3": "Unindo ideias ao código: criando realidades digitais do conceito à conclusão. Transformando Visão em Soluções de Software Acionáveis com Precisão e Paixão."
+    },
+    "NotFound": {
+        "Title": "404",
+        "Description": "A página que você procura não foi encontrada.",
+        "Button": "Voltar para a página inicial"
     }
 }

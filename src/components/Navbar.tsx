@@ -2,6 +2,7 @@
 
 import React, { ReactNode } from "react";
 import { motion } from "framer-motion";
+import { contactIcons } from "@/data/contactButtons";
 
 type NavbarButton = {
   section?: string;
@@ -25,17 +26,20 @@ const NavbarItem: React.FC<{
     if (section && onButtonClick) onButtonClick(section);
   };
 
+  // Renderizar ícone dinamicamente se for string
+  const IconComponent = typeof icon === "string" ? contactIcons[icon as keyof typeof contactIcons] : null;
+
   return link ? (
     <motion.a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center justify-center text-white hover:bg-zinc-600 rounded-full p-2 transition"
-      aria-label={label}
+      aria-label={label || (typeof icon === "string" ? icon : undefined)}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >
-      {icon}
+      {IconComponent ? <IconComponent size={32} /> : icon}
       {label && <span className="hidden md:block">{label}</span>}
     </motion.a>
   ) : (
@@ -46,7 +50,7 @@ const NavbarItem: React.FC<{
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >
-      {icon}
+      {IconComponent ? <IconComponent size={32} /> : icon}
       {label && <span className="hidden md:block">{label}</span>}
     </motion.button>
   );
