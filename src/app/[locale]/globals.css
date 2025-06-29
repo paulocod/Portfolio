@@ -10,3 +10,8 @@ body::-webkit-scrollbar-thumb {
     background: #a1a1aa;
     border-radius: 4px;
 }
+
+.navbar-button:focus {
+  outline: 2px solid #f97316;
+  outline-offset: 2px;
+}

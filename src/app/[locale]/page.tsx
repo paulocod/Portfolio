@@ -2,20 +2,11 @@
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import MovingIcons from "@/components/MovingItems";
 import Projects from "@/components/Projects";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import MobileMenu from "@/components/MobileHeader";
 import { useScrollToSection } from "@/hooks/useScrollToSection";
 import Navbar from "@/components/Navbar";
-import {
-  DevToLogo,
-  EnvelopeOpen,
-  LinkedinLogo,
-  MediumLogo,
-} from "@phosphor-icons/react";
-import { motion } from "framer-motion";
 import HomeSection from "../../components/sections/HomeSection";
 import AboutSection from "../../components/sections/AboutSection";
 import SkillsSection from "../../components/sections/SkillsSection";

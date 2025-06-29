@@ -12,6 +12,9 @@ const SkillsSection: React.FC<Props> = ({ t }) => (
       <strong className="text-orange-500"> & </strong>
       {t("SkillsSectionText2")}
     </h1>
+    <p className="mb-8 text-lg text-zinc-300 max-w-2xl mx-auto text-center">
+      {t("SkillsSectionDescription", { defaultMessage: "Aqui estão algumas das principais tecnologias e ferramentas que domino e utilizo no meu dia a dia como desenvolvedor." })}
+    </p>
     <MovingIcons />
   </section>
 );

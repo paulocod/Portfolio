@@ -34,24 +34,36 @@ const NavbarItem: React.FC<{
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center justify-center text-white hover:bg-zinc-600 rounded-full p-2 transition"
+      className="navbar-button flex items-center justify-center text-white hover:bg-zinc-600 rounded-full p-2 transition focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 relative"
       aria-label={label || (typeof icon === "string" ? icon : undefined)}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
+      title={label}
     >
       {IconComponent ? <IconComponent size={32} /> : icon}
       {label && <span className="hidden md:block">{label}</span>}
+      {label && (
+        <span className="absolute left-1/2 -translate-x-1/2 top-full mt-1 px-2 py-1 text-xs bg-zinc-900 text-white rounded shadow-lg z-10 whitespace-nowrap md:invisible md:opacity-0">
+          {label}
+        </span>
+      )}
     </motion.a>
   ) : (
     <motion.button
       onClick={handleClick}
-      className="flex items-center justify-center text-white hover:bg-zinc-600 rounded-full p-2 transition"
+      className="navbar-button flex items-center justify-center text-white hover:bg-zinc-600 rounded-full p-2 transition focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 relative"
       aria-label={label}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
+      title={label}
     >
       {IconComponent ? <IconComponent size={32} /> : icon}
       {label && <span className="hidden md:block">{label}</span>}
+      {label && (
+        <span className="absolute left-1/2 -translate-x-1/2 top-full mt-1 px-2 py-1 text-xs bg-zinc-900 text-white rounded shadow-lg z-10 whitespace-nowrap md:invisible md:opacity-0">
+          {label}
+        </span>
+      )}
     </motion.button>
   );
 };
@@ -62,6 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ onButtonClick, buttons }) => (
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 0.6, ease: "easeOut" }}
+    aria-label="Navegação principal"
   >
     {buttons.map((button, index) => (
       <NavbarItem key={index} button={button} onButtonClick={onButtonClick} />

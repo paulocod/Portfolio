@@ -7,6 +7,7 @@ import { skills } from "@/data/skills";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Autoplay } from "swiper/modules";
+import { Keyboard } from "swiper/modules";
 
 const SkillSwiper: React.FC<{ reverseDirection?: boolean }> = ({
   reverseDirection = false,
@@ -20,11 +21,14 @@ const SkillSwiper: React.FC<{ reverseDirection?: boolean }> = ({
       reverseDirection,
     }}
     speed={5000}
-    modules={[Autoplay]}
+    modules={[Autoplay, Keyboard]}
     spaceBetween={10}
+    keyboard={{ enabled: true }}
+    role="list"
+    aria-label="Lista de habilidades"
   >
     {skills.map((skill) => (
-      <SwiperSlide key={skill.name} aria-label={`Skill: ${skill.name}`}>
+      <SwiperSlide key={skill.name} aria-label={`Skill: ${skill.name}`} role="listitem">
         <motion.div
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}

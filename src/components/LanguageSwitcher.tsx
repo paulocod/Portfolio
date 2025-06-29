@@ -1,40 +1,49 @@
 "use client";
 
-import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
 
 const Switcher: React.FC = () => {
-  const [locale, setLocale] = useState("en");
-  const isOn = locale === "pt";
+  const router = useRouter();
+  const pathname = usePathname();
 
-  useEffect(() => {
-    const storedLocale = localStorage.getItem("currentLocale") || "en";
-    setLocale(storedLocale);
-  }, []);
+  const isPt = pathname.startsWith("/pt");
+  const currentLocale = isPt ? "pt" : "en";
+  const nextLocale = isPt ? "en" : "pt";
 
-  const toggleLocale = () => {
-    const newLocale = locale === "en" ? "pt" : "en";
-    setLocale(newLocale);
-    localStorage.setItem("currentLocale", newLocale);
+  const handleSwitch = () => {
+    let newPath = pathname.replace(/^\/(pt|en)/, "");
+    if (!newPath.startsWith("/")) newPath = "/" + newPath;
+    router.push(`/${nextLocale}${newPath}`);
   };
 
   return (
-    <div
-      className={`relative w-12 h-6 rounded-full transition-colors duration-300 ${
-        isOn ? "bg-orange-500" : "bg-black"
-      }`}
-    >
-      <Link href={`/${locale}`}>
-        <button
-          onClick={toggleLocale}
-          className={`absolute left-0 top-0 w-6 h-6 rounded-full shadow-md transform transition-transform duration-300 ${
-            isOn ? "translate-x-full bg-white" : "bg-orange-500"
-          }`}
-          aria-label={`Switch language to ${
-            locale === "en" ? "Portuguese" : "English"
-          }`}
-        />
-      </Link>
+    <div className="flex rounded-full border-2 border-orange-500 overflow-hidden w-fit">
+      <button
+        onClick={() => {
+          if (!isPt) handleSwitch();
+        }}
+        className={`px-4 py-1 text-xs font-bold transition-colors duration-300 focus:outline-none ${
+          isPt ? "bg-orange-500 text-white" : "bg-transparent text-orange-500 hover:bg-orange-100"
+        }`}
+        aria-label="Trocar idioma para Português"
+        title="Trocar idioma para Português"
+        type="button"
+      >
+        PT
+      </button>
+      <button
+        onClick={() => {
+          if (isPt) handleSwitch();
+        }}
+        className={`px-4 py-1 text-xs font-bold transition-colors duration-300 focus:outline-none ${
+          !isPt ? "bg-orange-500 text-white" : "bg-transparent text-orange-500 hover:bg-orange-100"
+        }`}
+        aria-label="Trocar idioma para Inglês"
+        title="Trocar idioma para Inglês"
+        type="button"
+      >
+        EN
+      </button>
     </div>
   );
 };

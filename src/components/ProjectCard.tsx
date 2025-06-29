@@ -23,12 +23,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const t = useTranslations("InfoText");
 
   return (
-    <motion.div
+    <motion.article
       initial={{ scale: 0.9, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row bg-zinc-800 hover:bg-zinc-700 transition duration-300 transform hover:scale-105"
+      tabIndex={0}
     >
       <a
         href={project.githubLink}
@@ -40,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div className="w-full md:w-1/2 relative">
           <Image
             src={project.image}
-            alt={`Screenshot of ${project.title}`}
+            alt={`Imagem do projeto: ${project.title} - Clique para ver no GitHub`}
             fill
             className="rounded-t-lg md:rounded-l-lg md:rounded-t-none object-cover"
           />
@@ -65,9 +66,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               </div>
             ))}
           </div>
+          <a
+            href={project.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-4 bg-orange-500 text-white rounded-full py-2 px-4 border-2 hover:bg-orange-600 transition font-medium"
+            aria-label={`Ver projeto ${project.title} no GitHub`}
+          >
+            Ver projeto
+          </a>
         </div>
       </a>
-    </motion.div>
+    </motion.article>
   );
 };
 

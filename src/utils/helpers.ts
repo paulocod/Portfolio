@@ -1,2 +1,2 @@
 export const getResumePath = (locale: string): string =>
-    locale === "pt" ? "software-engineer.pdf" : "desenvolvedor.pdf";
+    locale === "pt" ? "desenvolvedor.pdf" : "software-engineer.pdf";
