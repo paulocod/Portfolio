@@ -4,36 +4,38 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write .",
-    "analyze": "NEXT_PUBLIC_ANALYZE=true next build",
     "format:check": "prettier --check .",
-    "check": "npm run lint && npm run format:check"
+    "check": "npm run lint && npm run format:check",
+    "type-check": "tsc --noEmit",
+    "build:analyze": "NEXT_PUBLIC_ANALYZE=true next build"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.15",
     "framer-motion": "^11.11.17",
-    "next": "14.1.0",
+    "next": "^15.3.4",
     "next-intl": "^4.3.1",
     "react": "^18",
     "react-dom": "^18",
-    "swiper": "^11.0.5"
+    "swiper": "^11.0.5",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.1.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "^14.1.0",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-prettier": "^5.5.1",
     "postcss": "^8",
-    "prettier": "^3.6.2",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "tailwindcss": "^3.3.0"
   }
 }

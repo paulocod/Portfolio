@@ -91,6 +91,7 @@ O projeto suporta português e inglês através do `next-intl`:
 ## Responsividade
 
 O portfolio é totalmente responsivo e otimizado para:
+
 - Desktop
 - Tablet
 - Mobile
@@ -106,4 +107,4 @@ Para personalizar o portfolio:
 
 ## Licença
 
-MIT License - veja o arquivo [LICENSE](LICENSE) para detalhes. 
+MIT License - veja o arquivo [LICENSE](LICENSE) para detalhes.

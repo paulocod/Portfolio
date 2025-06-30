@@ -1,9 +1,9 @@
 import HomeClient from '../../components/HomeClient';
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: 'en' | 'pt' }>;
+}) {
   return <HomeClient />;
-}
-
-export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'pt' }];
 }

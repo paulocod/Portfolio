@@ -31,7 +31,8 @@ const MobileHeader: React.FC = () => {
           href={`/files/${resumePath}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition flex items-center gap-2"
+          className="bg-orange-600 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-700 transition flex items-center gap-2"
+          aria-label={`${t('ResumeButton')} - Download do currículo`}
         >
           {t('ResumeButton')}
           <DownloadSimple size={20} />

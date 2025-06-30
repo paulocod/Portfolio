@@ -39,7 +39,8 @@ const NotFound = () => {
       >
         <Link
           href="/"
-          className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition focus:outline-none focus:ring-2 focus:ring-orange-300"
+          className="bg-orange-600 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-700 transition focus:outline-none focus:ring-2 focus:ring-orange-300"
+          aria-label={`${t('Button')} - Voltar para a página inicial`}
         >
           {t('Button')}
         </Link>

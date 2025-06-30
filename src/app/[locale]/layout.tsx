@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
 import ScrollToTopClient from '@/components/ScrollToTopClient';
-
 import { JetBrains_Mono } from 'next/font/google';
 
 const jetBrains = JetBrains_Mono({
@@ -16,6 +15,10 @@ export const metadata: Metadata = {
   title: 'Paulo Campos',
   description: 'Welcome to my portfolio',
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: '/favicon.ico',
+  },
+  manifest: '/manifest.json',
   openGraph: {
     title: 'Paulo Campos',
     description: 'Welcome to my portfolio',
@@ -39,28 +42,30 @@ export const metadata: Metadata = {
   },
 };
 
-type Props = {
-  children: React.ReactNode;
-  params: {
-    locale: 'en' | 'pt';
-  };
+import enMessages from '@/messages/en.json';
+import ptMessages from '@/messages/pt.json';
+
+const messagesMap = {
+  en: enMessages,
+  pt: ptMessages,
 };
 
-const RootLayout: React.FC<Props> = ({
+export default async function RootLayout({
   children,
-  params: { locale },
-}: Props) => {
-  const messages = useMessages();
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: 'en' | 'pt' }>;
+}) {
+  const { locale } = await params;
+  const messages = messagesMap[locale] || messagesMap['en'];
+
   return (
     <html className={jetBrains.className} lang={locale} dir="ltr">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="manifest" href="/manifest.json" />
-      </head>
       <body className="bg-zinc-900 text-zinc-50">
         <a
           href="#main-content"
-          className="skip-link absolute left-2 top-2 z-50 bg-orange-500 text-white px-4 py-2 rounded transition-transform -translate-y-16 focus:translate-y-0 focus:outline-none"
+          className="skip-link absolute left-2 top-2 z-50 bg-orange-500 text-white px-4 py-2 rounded transition-transform -translate-y-16 focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2"
         >
           Pular para o conteúdo principal
         </a>
@@ -71,6 +76,4 @@ const RootLayout: React.FC<Props> = ({
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}

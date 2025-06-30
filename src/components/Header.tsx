@@ -61,6 +61,7 @@ const Header: React.FC<HeaderProps> = ({ onButtonClick }) => {
             className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition flex items-center gap-2"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+            aria-label={`${t('ResumeButton')} - Download do currículo`}
           >
             {t('ResumeButton')}
             <DownloadSimple size={20} />

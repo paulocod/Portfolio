@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import React from 'react';
 import Image from 'next/image';
@@ -48,6 +50,7 @@ const AboutSection: React.FC<Props> = ({ t }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-orange-500 text-white rounded-full py-2 px-4 border-2 hover:bg-orange-600 transition font-medium flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
+              aria-label={`${t('AboutSectionButtonResume')} - Download do currículo`}
             >
               {t('AboutSectionButtonResume')}
             </a>
@@ -56,6 +59,7 @@ const AboutSection: React.FC<Props> = ({ t }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-zinc-700 text-white rounded-full py-2 px-4 border-2 hover:bg-orange-500 transition font-medium flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
+              aria-label={`${t('AboutSectionButtonLinkedin')} - Perfil no LinkedIn`}
             >
               {t('AboutSectionButtonLinkedin')}
             </a>
@@ -64,6 +68,7 @@ const AboutSection: React.FC<Props> = ({ t }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-zinc-700 text-white rounded-full py-2 px-4 border-2 hover:bg-orange-500 transition font-medium flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
+              aria-label={`${t('AboutSectionButtonGithub')} - Perfil no GitHub`}
             >
               {t('AboutSectionButtonGithub')}
             </a>

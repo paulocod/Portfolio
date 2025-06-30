@@ -56,6 +56,7 @@ const Footer: React.FC = () => {
             className="bg-orange-500 text-white rounded-full py-3 px-6 border-2 hover:bg-orange-600 transition"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+            aria-label={`${t('ResumeButton')} - Download do currículo`}
           >
             {t('ResumeButton')}
           </motion.a>

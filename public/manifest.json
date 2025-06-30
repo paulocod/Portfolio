@@ -1,16 +1,29 @@
 {
-  "name": "Paulo Campos Portfolio",
+  "name": "Paulo Campos - Software Engineer",
   "short_name": "PauloCampos",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#18181b",
   "theme_color": "#f97316",
-  "description": "Portfolio de Paulo Campos, engenheiro de software.",
+  "description": "Portfolio de Paulo Campos, engenheiro de software especializado em desenvolvimento web e mobile.",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
   "icons": [
     {
       "src": "/favicon.ico",
       "sizes": "48x48 64x64 96x96 128x128 256x256 512x512",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "business"],
+  "screenshots": [
+    {
+      "src": "/imgs/grid-home.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide"
     }
   ]
 }

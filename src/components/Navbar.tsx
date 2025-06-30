@@ -26,7 +26,6 @@ const NavbarItem: React.FC<{
     if (section && onButtonClick) onButtonClick(section);
   };
 
-  // Renderizar ícone dinamicamente se for string
   const IconComponent =
     typeof icon === 'string'
       ? contactIcons[icon as keyof typeof contactIcons]
