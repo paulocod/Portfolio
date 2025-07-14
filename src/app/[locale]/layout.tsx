@@ -3,6 +3,8 @@ import './globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import ScrollToTopClient from '@/components/ScrollToTopClient';
 import { JetBrains_Mono } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const jetBrains = JetBrains_Mono({
   subsets: ['latin'],
@@ -71,6 +73,8 @@ export default async function RootLayout({
         </a>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
+          <Analytics />
+          <SpeedInsights />
           <ScrollToTopClient />
         </NextIntlClientProvider>
       </body>

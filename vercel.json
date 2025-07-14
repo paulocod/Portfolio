@@ -5,7 +5,7 @@
   "installCommand": "npm install",
   "outputDirectory": ".next",
   "env": {
-    "NEXT_PUBLIC_SITE_URL": "https://paulo.dev.vercel.app"
+    "NEXT_PUBLIC_SITE_URL": "https://paulocampos.dev.br"
   },
   "functions": {
     "src/app/**/*.tsx": {
@@ -27,6 +27,14 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
         }
       ]
     }
